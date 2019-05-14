@@ -1,13 +1,17 @@
 import React from 'react';
 import Navbar from './Navbar.js';
-import Form from "./Form";
+import Form from './Form';
+import PageContent from './PageContent';
+import { ThemeProvider } from './contexts/ThemeContext';
 
 function App() {
 	return (
-		<>
-			<Navbar />
-			<Form></Form>
-		</>
+		<ThemeProvider>
+			<PageContent>
+				<Navbar />
+				<Form />
+			</PageContent>
+		</ThemeProvider>
 	);
 }
 
